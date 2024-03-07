@@ -511,28 +511,28 @@
     input = extrude
     combinatorial_geometry = 'z<=20'
     block_id = 1000
-    excluded_subdomain_ids= '103 203 303 250 400 401 500 501 502 503 504 600 601'
+    excluded_subdomains= '103 203 303 250 400 401 500 501 502 503 504 600 601'
   []
   [reflector_bottom_tri]
     type = ParsedSubdomainMeshGenerator
     input = reflector_bottom_quad
     combinatorial_geometry = 'z<=20'
     block_id = 1003
-    excluded_subdomain_ids= '1000 250 400 401 500 501 502 503 504 600 601'
+    excluded_subdomains= '1000 250 400 401 500 501 502 503 504 600 601'
   []
   [reflector_top_quad]
     type = ParsedSubdomainMeshGenerator
     input = reflector_bottom_tri
     combinatorial_geometry = 'z>=180'
     block_id = 1000
-    excluded_subdomain_ids= '103 203 303 200 201 250 400 401 500 501 502 503 504 600 601'
+    excluded_subdomains= '103 203 303 200 201 250 400 401 500 501 502 503 504 600 601'
   []
   [reflector_top_tri]
     type = ParsedSubdomainMeshGenerator
     input = reflector_top_quad
     combinatorial_geometry = 'z>=180'
     block_id = 1003
-    excluded_subdomain_ids= '1000 200 201 203 250 400 401 500 501 502 503 504 600 601'
+    excluded_subdomains= '1000 200 201 203 250 400 401 500 501 502 503 504 600 601'
   []
   # Assgin block names
   [rename_blocks]

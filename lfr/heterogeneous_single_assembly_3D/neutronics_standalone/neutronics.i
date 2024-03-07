@@ -547,12 +547,12 @@ totalpower = 3700000.0 # W
   maximum_diffusion_coefficient = 1000
 []
 
-[Materials]
+[Compositions]
   [Fuel_Ring1_Hole]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_fuel_R1} ${bid_F_heliumc} ${bid_F_helium}'
-    library_id = '${lid_F_fuel_R1}'
-    materials = '
+    composition_ids = '${lid_F_fuel_R1}'
+    isotope_densities = '
      Fuel_Hole ${mid_F_helium}
        HE4:2.512611E-05;
 
@@ -569,10 +569,10 @@ totalpower = 3700000.0 # W
        O16:4.444138E-02'
   []
   [Fuel_Ring2]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_fuel_R2}'
-    library_id = '${lid_F_fuel_R2}'
-    materials = '
+    composition_ids = '${lid_F_fuel_R2}'
+    isotope_densities = '
      Fuel_Ring2 ${mid_F_fuel_R2}
        U234:1.769055E-07
        U235:4.404137E-05
@@ -586,10 +586,10 @@ totalpower = 3700000.0 # W
        O16:4.444138E-02'
   []
   [Fuel_Ring3]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_fuel_R3}'
-    library_id = '${lid_F_fuel_R3}'
-    materials = '
+    composition_ids = '${lid_F_fuel_R3}'
+    isotope_densities = '
      Fuel_Ring3 ${mid_F_fuel_R3}
        U234:1.769055E-07
        U235:4.404137E-05
@@ -603,10 +603,10 @@ totalpower = 3700000.0 # W
        O16:4.444138E-02'
   []
   [Fuel_Ring4]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_fuel_R4}'
-    library_id = '${lid_F_fuel_R4}'
-    materials = '
+    composition_ids = '${lid_F_fuel_R4}'
+    isotope_densities = '
      Fuel_Ring4 ${mid_F_fuel_R4}
        U234:1.769055E-07
        U235:4.404137E-05
@@ -620,10 +620,10 @@ totalpower = 3700000.0 # W
        O16:4.444138E-02'
   []
   [Fuel_Ring5]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_fuel_R5}'
-    library_id = '${lid_F_fuel_R5}'
-    materials = '
+    composition_ids = '${lid_F_fuel_R5}'
+    isotope_densities = '
      Fuel_Ring5 ${mid_F_fuel_R5}
        U234:1.769055E-07
        U235:4.404137E-05
@@ -637,10 +637,10 @@ totalpower = 3700000.0 # W
        O16:4.444138E-02'
   []
   [Fuel_Ring6]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_fuel_R6}'
-    library_id = '${lid_F_fuel_R6}'
-    materials = '
+    composition_ids = '${lid_F_fuel_R6}'
+    isotope_densities = '
      Fuel_Ring6 ${mid_F_fuel_R6}
        U234:1.769055E-07
        U235:4.404137E-05
@@ -654,10 +654,10 @@ totalpower = 3700000.0 # W
        O16:4.444138E-02'
   []
   [Fuel_Ring7]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_fuel_R7}'
-    library_id = '${lid_F_fuel_R7}'
-    materials = '
+    composition_ids = '${lid_F_fuel_R7}'
+    isotope_densities = '
      Fuel_Ring7 ${mid_F_fuel_R7}
        U234:1.769055E-07
        U235:4.404137E-05
@@ -671,10 +671,10 @@ totalpower = 3700000.0 # W
        O16:4.444138E-02'
   []
   [Fuel_Clad]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_clad}'
-    library_id = '${lid_F_clad}'
-    materials = '
+    composition_ids = '${lid_F_clad}'
+    isotope_densities = '
      Fuel_Clad ${mid_F_clad}
        FE54:3.185952E-03
        FE56:5.001168E-02
@@ -739,10 +739,10 @@ totalpower = 3700000.0 # W
        B11:2.070704E-05'
   []
   [Fuel_Lead]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_lead}'
-    library_id = '${lid_F_lead}'
-    materials = '
+    composition_ids = '${lid_F_lead}'
+    isotope_densities = '
      Fuel_Lead ${mid_F_lead}
        PB204:4.232323E-04
        PB206:7.285612E-03
@@ -750,10 +750,10 @@ totalpower = 3700000.0 # W
        PB208:1.584046E-02'
   []
   [Fuel_LeadGap]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_leadgap}'
-    library_id = '${lid_F_leadgap}'
-    materials = '
+    composition_ids = '${lid_F_leadgap}'
+    isotope_densities = '
      Fuel_LeadGap ${mid_F_leadgap}
        PB204:4.232323E-04
        PB206:7.285612E-03
@@ -761,10 +761,10 @@ totalpower = 3700000.0 # W
        PB208:1.584046E-02'
   []
   [Fuel_Duct]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_F_duct}'
-    library_id = '${lid_F_duct}'
-    materials = '
+    composition_ids = '${lid_F_duct}'
+    isotope_densities = '
      Fuel_Duct ${mid_F_duct}
        FE54:3.192503E-03
        FE56:5.011505E-02
@@ -829,10 +829,10 @@ totalpower = 3700000.0 # W
        B11:2.075002E-05'
   []
   [LowerCorePlate]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_A} ${bid_Ac}'
-    library_id = '${lid_A}'
-    materials = '
+    composition_ids = '${lid_A}'
+    isotope_densities = '
      LowerCorePlate ${mid_A}
        FE54:2.357119E-03
        FE56:3.700230E-02
@@ -901,10 +901,10 @@ totalpower = 3700000.0 # W
        PB208:4.379936E-03'
   []
   [InletWrapper]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_B} ${bid_Bc}'
-    library_id = '${lid_B}'
-    materials = '
+    composition_ids = '${lid_B}'
+    isotope_densities = '
      InletWrapper ${mid_B}
        FE54:2.614802E-04
        FE56:4.104560E-03
@@ -973,10 +973,10 @@ totalpower = 3700000.0 # W
        PB208:1.454357E-02'
   []
   [LowerBundle]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_C} ${bid_Cc}'
-    library_id = '${lid_C}'
-    materials = '
+    composition_ids = '${lid_C}'
+    isotope_densities = '
      LowerBundle ${mid_C}
        FE54:1.251752E-03
        FE56:1.964981E-02
@@ -1045,10 +1045,10 @@ totalpower = 3700000.0 # W
        PB208:9.620298E-03'
   []
   [LowerGasPlenum]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_D_lead} ${bid_D_clad} ${bid_D_duct} ${bid_D_tubemix} ${bid_D_tubemixc}'
-    library_id = '${lid_D}'
-    materials = '
+    composition_ids = '${lid_D}'
+    isotope_densities = '
      D_TUBEMIX ${mid_D_tubemix}
        FE54:6.532669E-04
        FE56:1.025499E-02
@@ -1246,10 +1246,10 @@ totalpower = 3700000.0 # W
        B11:2.075002E-05'
   []
   [LowerInsulator]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_E_lead} ${bid_E_clad} ${bid_E_duct} ${bid_E_yszmix} ${bid_E_yszmixc}'
-    library_id = '${lid_E}'
-    materials = '
+    composition_ids = '${lid_E}'
+    isotope_densities = '
      E_YSZMIX ${mid_E_yszmix}
        ZR90:1.110556E-02
        ZR91:2.421721E-03
@@ -1393,10 +1393,10 @@ totalpower = 3700000.0 # W
        B11:2.075002E-05'
   []
   [UpperInsulator]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_G_lead} ${bid_G_clad} ${bid_G_duct} ${bid_G_yszmix} ${bid_G_yszmixc}'
-    library_id = '${lid_G}'
-    materials = '
+    composition_ids = '${lid_G}'
+    isotope_densities = '
      G_YSZMIX ${mid_G_yszmix}
        ZR90:1.110556E-02
        ZR91:2.421721E-03
@@ -1540,10 +1540,10 @@ totalpower = 3700000.0 # W
        B11:2.075002E-05'
   []
   [UpperGasPlenum]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_H_lead} ${bid_H_clad} ${bid_H_duct} ${bid_H_springmix} ${bid_H_springmixc}'
-    library_id = '${lid_H}'
-    materials = '
+    composition_ids = '${lid_H}'
+    isotope_densities = '
      H_SPRINGMIX ${mid_H_springmix}
        FE54:3.504949E-04
        FE56:5.501991E-03
@@ -1741,10 +1741,10 @@ totalpower = 3700000.0 # W
        B11:2.075002E-05'
   []
   [UpperBundle]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_I} ${bid_Ic}'
-    library_id = '${lid_I}'
-    materials = '
+    composition_ids = '${lid_I}'
+    isotope_densities = '
      UpperBundle ${mid_I}
        FE54:1.251752E-03
        FE56:1.964981E-02
@@ -1813,10 +1813,10 @@ totalpower = 3700000.0 # W
        PB208:9.620298E-03'
   []
   [OutletWrapper]
-    type = MicroNeutronicsMaterial
+    type = IsotopeComposition
     block = '${bid_J} ${bid_Jc}'
-    library_id = '${lid_J}'
-    materials = '
+    composition_ids = '${lid_J}'
+    isotope_densities = '
      OutletWrapper ${mid_J}
        FE54:7.604462E-04
        FE56:1.193694E-02
