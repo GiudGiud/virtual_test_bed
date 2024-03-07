@@ -97,7 +97,7 @@ coordinates5 = '${fparse coordinates4+OPyC_thickness}'
   []
 []
 
-[Modules/TensorMechanics/Master]
+[Physics/SolidMechanics/QuasiStatic]
   generate_output = 'stress_xx stress_yy stress_zz strain_xx strain_yy strain_zz '
                     'max_principal_stress'
   add_variables = true
@@ -248,7 +248,7 @@ coordinates5 = '${fparse coordinates4+OPyC_thickness}'
   [fast_neutron_flux]
     type = FastNeutronFlux
     calculate_fluence = true
-    function = 1.16e18
+    flux_function = 1.16e18
   []
   [UCO_burnup]
     type = TRISOBurnup

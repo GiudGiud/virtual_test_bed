@@ -48,7 +48,7 @@ plenum_height        = 782.2e-3  # 778.0e-3
     clad_gap_width = ${gap}
     bottom_clad_height = 0
     top_clad_height = ${clad_thickness}
-    clad_bot_gap_height = 0.
+    clad_bot_gap_height =${clad_thickness}
     clad_top_gap_height = ${plenum_height} # fixme assumes no Na bond sodium
     # meshing parameters
     clad_mesh_density = customize
