@@ -92,7 +92,7 @@ opens between the buffer and IPyC layers.
 
 ## Tensor Mechanics Action
 
-The tensor mechanics `Master` action simplifies the input file syntax for creating a tensor mechanics model. It specifies the thermo-mechanical models of the kernel, buffer, IPyC/OPyC and SiC.
+The solid mechanics `QuasiStatic` action simplifies the input file syntax for creating a solid mechanics model. It specifies the thermo-mechanical models of the kernel, buffer, IPyC/OPyC and SiC.
 
 !listing htgr/triso_fuel/triso_1d.i block=Modules/TensorMechanics/Master language=cpp
 
