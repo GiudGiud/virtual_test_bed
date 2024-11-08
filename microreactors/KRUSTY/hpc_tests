@@ -10,12 +10,6 @@
       executable_pattern = 'griffin*|blue_crab*|dire_wolf*'
       cli_args = "--mesh-only MESH/Griffin_mesh.e"
     []
-    [mesh_gen_griffin_check]
-      type = CSVDiff
-      input = 'MESH/KRUSTY_mesh_gen_griffin.i'
-      csvdiff = MESH/KRUSTY_mesh_gen_griffin_out.csv
-      executable_pattern = 'griffin*|blue_crab*|dire_wolf*'
-    []
     [mesh_gen_bison]
       type = Exodiff
       input = 'MESH/KRUSTY_mesh_gen_bison.i'

@@ -3,7 +3,7 @@
   [neutronics_only]
     type = CSVDiff
     input = 'run_neutronics_9_group.i'
-    cli_args = "MultiApps/active='' Transfers/active='' Executioner/fixed_point_min_its=0"
+    cli_args = "MultiApps/active='' Transfers/active='' Executioner/fixed_point_min_its=0 Outputs/exodus=false"
     csvdiff = 'run_neutronics_9_group_out.csv'
     executable_pattern = 'griffin*'
     # Model is fairly expensive to run
@@ -14,7 +14,7 @@
   [flow_only]
     type = CSVDiff
     input = 'run_ns_initial.i'
-    cli_args = "MultiApps/active='' Transfers/active='' Executioner/num_steps=3"
+    cli_args = "MultiApps/active='' Transfers/active='' Executioner/num_steps=3 Outputs/exodus=false"
     csvdiff = 'run_ns_initial_out.csv'
     executable_pattern = 'pronghorn*|combined*'
     # Model is fairly expensive to run
@@ -27,7 +27,7 @@
     input = 'run_neutronics_9_group.i'
     csvdiff = 'multiphysics_out.csv multiphysics_out_ns0.csv'
     executable_pattern = 'mcre*|blue_crab*'
-    cli_args = "Outputs/file_base=multiphysics_out"
+    cli_args = "Outputs/file_base=multiphysics_out Outputs/exodus=false"
     # Fuel temperature is out of bounds for MGXS
     allow_warnings = true
     min_parallel = 32
