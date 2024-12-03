@@ -41,6 +41,8 @@
     # Expensive test
     max_time = 500
     method = 'opt'
+    # Missing group cross section for absorption
+    allow_warnings = true
   []
 
   # Regression tests - single app inputs
@@ -53,6 +55,8 @@
     executable_pattern = 'blue_crab*'
     min_parallel = 4
     prereq = 'syntax_neutronics'
+    # Missing group cross section for absorption
+    allow_warnings = true
   []
   [core_flow]
     type = CSVDiff
