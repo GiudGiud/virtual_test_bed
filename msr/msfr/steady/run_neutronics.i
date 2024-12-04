@@ -14,6 +14,7 @@
   solid_blocks = 'reflector shield'
   n_dnp = 6
   use_transient_multi_app = false
+  no_restore = true
   fluid_app_name = ns
   fluid_input_file = run_ns.i
   initial_fluid_temperature = 873.15
