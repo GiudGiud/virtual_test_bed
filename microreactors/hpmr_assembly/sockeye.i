@@ -25,8 +25,8 @@ T_ref_density = ${T_initial}
 fill_ratio = 1.1
 T_ref_fill_ratio = 500.0
 
-T_hx = ${units 50 degC -> K}
-htc_hx = 228.0
+T_hx = ${units 1000 degC -> K}
+htc_hx = 2.0
 
 [FluidProperties]
   [fp_2phase]
@@ -191,6 +191,7 @@ htc_hx = 228.0
   nl_rel_tol = 1e-7
   nl_abs_tol = 1e-7
   nl_max_its = 15
+
 []
 
 [Outputs]

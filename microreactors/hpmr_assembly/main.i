@@ -3,7 +3,7 @@
 # Must be run with DireWolf if the MultiApps are active
 # If using or referring to this model, please cite as explained in
 # https://mooseframework.inl.gov/virtual_test_bed/citing.html
-graph_blocks = 'monolith monolith_tri brefl brefl_tri trefl trefl_tri'
+# graph_blocks = 'monolith monolith_tri brefl brefl_tri trefl trefl_tri'
 fuel_blocks = 'fuel'
 
 initial_T_asm = 1200.0
@@ -17,11 +17,11 @@ rho_fuel = 10970.0
 rho_graphite = 1806.0
 rho_helium = 0.0476
 
-rho_fuel_compact = '${fparse alpha_fuel * rho_fuel + alpha_graphite * rho_graphite + alpha_helium * rho_helium}'
+# rho_fuel_compact = '${fparse alpha_fuel * rho_fuel + alpha_graphite * rho_graphite + alpha_helium * rho_helium}'
 
 # This factor is used to accelerate the steady-state convergence. A real
 # transient should use a factor of 1.
-cp_scale_factor = 1e-5
+# cp_scale_factor = 1e-5
 
 n_hp = 7
 hp_axial_offset = 0.2 # axial offset for heat pipes; equal to reflector height
@@ -141,40 +141,45 @@ hp_positions = '
     property_name = fast_neutron_fluence
     expression = 0.0
   []
-  [matrix_thermal_props]
-    type = GraphiteMatrixThermal
-    block = ${fuel_blocks}
-    temperature = temperature
-    graphite_grade = IG_110
-    packing_fraction = 0.359
-    etc_model = DEMT
-    flux_conversion_factor = 0.0
-    TRISO_conductivity = 4.13
-    TRISO_specific_heat = 748.72
-    specific_heat_scale_factor = ${cp_scale_factor}
-    outputs = all
+  # [matrix_thermal_props]
+  #   type = GraphiteMatrixThermal
+  #   block = ${fuel_blocks}
+  #   temperature = temperature
+  #   graphite_grade = IG_110
+  #   packing_fraction = 0.359
+  #   etc_model = DEMT
+  #   flux_conversion_factor = 0.0
+  #   TRISO_conductivity = 4.13
+  #   TRISO_specific_heat = 748.72
+  #   specific_heat_scale_factor = ${cp_scale_factor}
+  #   outputs = all
+  # []
+  [constant]
+    type = GenericConstantMaterial
+    prop_names = 'thermal_conductivity specific_heat density'
+    prop_values = '10                  1000          9000'
   []
-  [fuel_compact_density]
-    type = StrainAdjustedDensity
-    block = ${fuel_blocks}
-    displacements = '0 0 0'
-    strain_free_density = '${rho_fuel_compact}'
-  []
-  [graph_density]
-    type = StrainAdjustedDensity
-    block = ${graph_blocks}
-    displacements = '0 0 0'
-    strain_free_density = '${rho_graphite}'
-  []
-  [graph]
-    type = GraphiteMatrixThermal
-    block = ${graph_blocks}
-    temperature = temperature
-    graphite_grade = IG_110
-    packing_fraction = 0.0
-    flux_conversion_factor = 0.0
-    specific_heat_scale_factor = ${cp_scale_factor}
-  []
+  # [fuel_compact_density]
+  #   type = StrainAdjustedDensity
+  #   block = ${fuel_blocks}
+  #   displacements = '0 0 0'
+  #   strain_free_density = '${rho_fuel_compact}'
+  # []
+  # [graph_density]
+  #   type = StrainAdjustedDensity
+  #   block = ${graph_blocks}
+  #   displacements = '0 0 0'
+  #   strain_free_density = '${rho_graphite}'
+  # []
+  # [graph]
+  #   type = GraphiteMatrixThermal
+  #   block = ${graph_blocks}
+  #   temperature = temperature
+  #   graphite_grade = IG_110
+  #   packing_fraction = 0.0
+  #   flux_conversion_factor = 0.0
+  #   specific_heat_scale_factor = ${cp_scale_factor}
+  # []
 []
 
 [MultiApps]
@@ -236,6 +241,7 @@ hp_positions = '
 [Executioner]
   type = Transient
   scheme = bdf2
+  # multi_system_fixed_point_algorithm=secant
 
   [TimeStepper]
     type = SolutionTimeAdaptiveDT
@@ -254,9 +260,11 @@ hp_positions = '
   nl_abs_tol = 1e-7
   l_tol = 1e-7
 
+  # fixed_point_algorithm = 'secant'
   fixed_point_max_its = 15
   fixed_point_rel_tol = 1e-7
   fixed_point_abs_tol = 1e-7
+  transformed_variables = 'temperature'
 []
 
 [Postprocessors]
